@@ -1,0 +1,15 @@
+<mat-card> Add To Do List
+    <form #todoForm="ngForm" class="w-100">
+    <mat-form-field class="w-100" appearance="standard">
+      <input type="text" name="name" [(ngModel)]="newTodo.name" #name matInput
+        placeholder="Name" >
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="standard">
+        <input type="text" name="description" [(ngModel)]="newTodo.description" #description matInput
+          placeholder="Description" >
+      </mat-form-field>
+      
+        <button  (click)="addTodo(todoForm)">
+        <mat-icon matSuffix>mode_add</mat-icon></button>
+
+  </form></mat-card>

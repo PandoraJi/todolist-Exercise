@@ -1,0 +1,27 @@
+
+.close-btn {
+    color: #cc9a9a;
+    transition: color 0.2s ease-out;
+  }
+  
+  .close-btn:hover {
+    color: #BC002D;
+  }
+  
+  .strike-text {
+    text-decoration: line-through;
+    color: #c1c1c1;
+  }
+  .alignment
+  {
+      padding: 8px;
+  }
+  .header
+  {
+    list-style-type:none;
+  }
+
+  .items
+  {
+   border-bottom: 1px black solid;
+  }
