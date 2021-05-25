@@ -8,7 +8,7 @@
                     <li class="d-flex w-100 justify-content-between items">
                         <div class="d-flex w-100 justify-content-between">
                             <p  class="d-inline-flex ml-4" style="display: inline-block;">
-                            <span class="alignment">Name</span>  <span class="alignment"> Description</span>  <span class="alignment">Status</span>  </p>
+                            <span class="alignment w-100">Name</span>  <span class="alignment w-100"> Description</span>  <span class="alignment w-100">Status</span>  </p>
                         </div>
                     </li>
 
@@ -26,7 +26,7 @@
                   </mat-form-field>
                   <button *ngIf="todo.id === editTodo.id"
                   (click)="updateTodo(todo)" matTooltip="Update" mat-icon-button aria-label="Update todo task">
-                  <mat-icon matSuffix (click)="updateTodo(todo)">mode_save</mat-icon>
+                  <mat-icon (click)="updateTodo(todo)">save</mat-icon>
                 </button>
                 
                   <div class="d-flex w-100 justify-content-between">
@@ -34,10 +34,10 @@
                   [checked]="todo.status" (change)="updateTodoStatus(todo)"></mat-checkbox>
                  <p *ngIf="todo.id !== editTodo.id" [ngClass]="{'strike-text': todo.status }" class="d-inline-flex ml-4" style="display: inline-block;"
                   (dblclick)="hasEditTodo(todo)">
-                  <span class="alignment">{{todo.name}}</span>  <span class="alignment"> {{todo.description}}</span>  <span class="alignment">{{todo.status==true?'Completed':"Not Done"}}</span>  </p>
+                  <span class="w-100 alignment">{{todo.name}}</span>  <span class="w-100 alignment"> {{todo.description}}</span>  <span class="w-100 alignment">{{todo.status==true?'Completed':"Not Done"}}</span>  </p>
                   <button *ngIf="todo.id !== editTodo.id" class="float-right btn btn-sm close-btn"
                   (click)="deleteTodo(todo)" matTooltip="Delete" mat-icon-button aria-label="Delete todo task">
-                  <mat-icon>close</mat-icon>
+                  <mat-icon>delete</mat-icon>
                 </button>
                 </div>
               </li>
